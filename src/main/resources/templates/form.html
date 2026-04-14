@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Form Input</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        input[type=text] { width: 300px; padding: 8px; margin: 8px 0 16px 0;
+                           display: block; border: 1px solid #ccc; border-radius: 4px; }
+        button { padding: 10px 20px; background: #007bff; color: white;
+                 border: none; border-radius: 4px; cursor: pointer; }
+        a { color: #007bff; }
+    </style>
+</head>
+<body>
+<h2>Form Input Mahasiswa</h2>
+<form th:action="@{/form}" method="post">
+    <label>Nama:</label>
+    <input type="text" name="nama" required />
+
+    <label>NIM:</label>
+    <input type="text" name="nim" required />
+
+    <label>Jenis Kelamin:</label>
+    <input type="radio" name="jenisKelamin" value="Laki-laki" required /> Laki-laki
+    <input type="radio" name="jenisKelamin" value="Perempuan" /> Perempuan
+    <br><br>
+
+    <button type="submit">Submit</button>
+</form>
+<br>
+<a href="/home">Kembali ke Home</a>
+</body>
+</html>
